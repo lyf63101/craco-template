@@ -1,6 +1,7 @@
 {
-  "eslint.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "eslint.validate": [
     "javascript",
@@ -9,7 +10,7 @@
     "typescriptreact"
   ],
   "files.eol": "\n",
-  "editor.defaultFormatter": "vscode.typescript-language-features",
   "editor.tabSize": 2,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "stylelint.validate": ["less", "sass", "scss", "css"]
 }
