@@ -3,11 +3,36 @@ const CracoAlias = require("craco-alias");
 const CracoESLintWebpackPlugin = require("craco-eslint-webpack-plugin");
 const CracoLessPlugin = require("craco-less");
 const { loaderByName } = require("@craco/craco");
+const CracoEsbuildPlugin = require("craco-esbuild");
+const path = require("path");
 
 const lessModuleRegex = /\.module\.less$/;
 
 module.exports = {
   plugins: [
+    {
+      plugin: CracoEsbuildPlugin,
+      options: {
+        includePaths: [path.join(__dirname, "src")], // Optional. If you want to include components which are not in src folder
+        esbuildLoaderOptions: {
+          // Optional. Defaults to auto-detect loader.
+          loader: "tsx", // Set the value to 'tsx' if you use typescript
+          target: "es2015",
+        },
+        esbuildMinimizerOptions: {
+          // Optional. Defaults to:
+          target: "es2015",
+          css: true, // if true, OptimizeCssAssetsWebpackPlugin will also be replaced by esbuild.
+        },
+        skipEsbuildJest: false, // Optional. Set to true if you want to use babel for jest tests,
+        esbuildJestOptions: {
+          loaders: {
+            ".ts": "ts",
+            ".tsx": "tsx",
+          },
+        },
+      },
+    },
     {
       plugin: CracoAlias,
       options: {

@@ -54,6 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "craco-alias": "^3.0.1",
+    "craco-esbuild": "^0.5.2",
     "craco-eslint-webpack-plugin": "^1.0.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",

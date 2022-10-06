@@ -1,15 +1,3 @@
-/*
- * @Author: jianwen.Wang
- * @Date: 2022-04-21 21:20:34
- * @LastEditTime: 2022-04-25 20:49:07
- * @LastEditors: jiawen.wang
- */
-/**
- * Access `process.env` in an environment helper
- * Usage: `EnvHelper.env`
- * - Other static methods can be added as needed per
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
- */
 export class EnvHelper {
   /**
    * @returns `process.env`
@@ -18,7 +6,7 @@ export class EnvHelper {
   static whitespaceRegex = /\s+/;
   static alchemyGoerliTestURI = `https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`;
   static alchemyMainnetURI = `https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161`;
-  static scanApiKey = "1D2UHNV6SHAA6CGKRRQ72ZDSVWRDUKASJ6";
+  static scanApiKey = "";
   static isDebug() {
     return localStorage.getItem("__JPG_SNIPER_DEBUG__") === "true";
   }
@@ -39,7 +27,7 @@ export class EnvHelper {
         REACT_APP_CHAIN_ID_16: "0x5",
         REACT_APP_CHAIN_NAME: "Goerli Testnet",
         REACT_APP_CHAIN_API_HOST: "https://api-goerli.etherscan.io",
-        REACT_APP_CHAIN_API_KEY: "1D2UHNV6SHAA6CGKRRQ72ZDSVWRDUKASJ6",
+        REACT_APP_CHAIN_API_KEY: "",
         REACT_APP_CHAIN_RPC: "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
         REACT_APP_CHAIN_BLOCK: "https://goerli.etherscan.io",
       };
@@ -50,7 +38,7 @@ export class EnvHelper {
       REACT_APP_CHAIN_ID_16: "0x1",
       REACT_APP_CHAIN_NAME: "Mainnet",
       REACT_APP_CHAIN_API_HOST: "https://api.etherscan.io",
-      REACT_APP_CHAIN_API_KEY: "1D2UHNV6SHAA6CGKRRQ72ZDSVWRDUKASJ6",
+      REACT_APP_CHAIN_API_KEY: "",
       REACT_APP_CHAIN_RPC: EnvHelper.alchemyMainnetURI,
       REACT_APP_CHAIN_BLOCK: "https://etherscan.io",
     };
