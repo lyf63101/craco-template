@@ -5,10 +5,10 @@ module.exports = {
   extends: ["stylelint-config-standard", "stylelint-config-css-modules"],
   rules: {
     "selector-class-pattern": [
-      // 命名规范 -
-      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      // 命名规范 驼峰命名
+      "^([a-z][a-z0-9]*)([A-Za-z0-9]+)*$",
       {
-        message: "Expected class selector to be kebab-case",
+        message: "Expected class selector to be camel-case",
       },
     ],
     "string-quotes": "single", // 单引号
